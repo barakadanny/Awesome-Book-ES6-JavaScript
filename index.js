@@ -1,6 +1,11 @@
+import { DateTime } from './modules/luxon.js';
 import Book from './modules/book.js';
 import UI from './modules/ui.js';
 import Store from './modules/store.js';
+
+// define the current local time
+const currentDate = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+document.getElementById('current-date').innerHTML = currentDate;
 
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
@@ -26,7 +31,7 @@ form.addEventListener('submit', (e) => {
 document.querySelector('.books-list').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
   Store.removeBook(
-    e.target.previousElementSibling.previousElementSibling.textContent,
+    e.target.previousElementSibling.previousElementSibling.textContent
   );
   //   console.log(e.target.previousElementSibling.previousElementSibling);
 });
