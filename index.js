@@ -31,7 +31,7 @@ form.addEventListener('submit', (e) => {
 document.querySelector('.books-list').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
   Store.removeBook(
-    e.target.previousElementSibling.previousElementSibling.textContent
+    e.target.previousElementSibling.previousElementSibling.textContent,
   );
   //   console.log(e.target.previousElementSibling.previousElementSibling);
 });
