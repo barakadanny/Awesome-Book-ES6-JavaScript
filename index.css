@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 1rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  padding: 0.5rem 1rem;
+}
+
+.menu li:not(:last-child) {
+  margin-right: 0.4rem;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.menu-item.active {
+  background-color: rgb(190, 185, 185);
+}
+
+.menu li a {
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.content-description {
+  align-items: center;
+  width: 100%;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* table css */
+.books {
+  border-collapse: collapse;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.books-list {
+  width: 80%;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.book:nth-child(even) {
+  background-color: #ddd;
+}
+
+/* btn css */
+.delete {
+  background-color: #f44336;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f44336;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete:hover {
+  background-color: transparent;
+  color: #f44336;
+}
+
+/* add book section */
+.add-book {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+form {
+  width: 50%;
+}
+
+.book-author {
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 8px 2px;
+  outline: none;
+}
+
+.add-book-btn {
+  align-self: flex-end;
+  max-width: 100px;
+}
+
+/* contact */
+.contact {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-list {
+  list-style-type: disc;
+}
+
+/* copy right css */
+.copy-right {
+  text-align: left;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
