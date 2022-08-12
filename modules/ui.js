@@ -1,5 +1,5 @@
 import Store from './store.js';
-// const booksAr = [];
+
 class UI {
   static displayBooks() {
     const books = Store.getBooks();
@@ -13,15 +13,14 @@ class UI {
     const bookDisplay = document.createElement('div');
     bookDisplay.classList.add('book');
     bookDisplay.innerHTML = `
-    <h3> ${book.title} </h3>
-    <div class="book-details">
-     <p> by ${book.author}</p>
-    </div>
-     <button class="delete" >Delete</button>
+    <p class="bookTitle"><b>${book.title}</b></p>
+        <p>by &nbsp; &nbsp;<span></span><b>${book.author}.</b></p>
+        <button class="delete">Remove</button>
      `;
     list.appendChild(bookDisplay);
   }
 
+  // delete book from local storage
   static deleteBook(el) {
     if (el.classList.contains('delete')) {
       el.parentElement.remove();

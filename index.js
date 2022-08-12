@@ -33,7 +33,6 @@ document.querySelector('.books-list').addEventListener('click', (e) => {
   Store.removeBook(
     e.target.previousElementSibling.previousElementSibling.textContent,
   );
-  //   console.log(e.target.previousElementSibling.previousElementSibling);
 });
 
 // Don't touch unless you want to break this code 💀⚠
@@ -72,14 +71,15 @@ contact.addEventListener('click', (e) => {
 });
 
 // change tabs js function
-function openTab(e) {
+// function openTab(e)
+const openTab = (e) => {
   let i;
   const tabLinks = document.getElementsByClassName('menu-item');
   for (i = 0; i < tabLinks.length; i += 1) {
     tabLinks[i].className = tabLinks[i].className.replace('active', '');
   }
   e.currentTarget.className += ' active';
-}
+};
 
 const menuItem = document.querySelectorAll('.menu-item');
 

@@ -10,14 +10,12 @@ class Store {
     return books;
   }
 
-  // add books to localStorage
   static addBook(book) {
     const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  // remove a book from local storage
   static removeBook(title) {
     const books = Store.getBooks();
 
@@ -26,6 +24,7 @@ class Store {
         books.splice(index, 1);
       }
     });
+
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
