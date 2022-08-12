@@ -31,7 +31,7 @@ form.addEventListener('submit', (e) => {
 document.querySelector('.books-list').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
   Store.removeBook(
-    e.target.previousElementSibling.previousElementSibling.textContent,
+    e.target.previousElementSibling.previousElementSibling.textContent
   );
 });
 
@@ -70,8 +70,6 @@ contact.addEventListener('click', (e) => {
   contactSection.style.display = 'flex';
 });
 
-// change tabs js function
-// function openTab(e)
 const openTab = (e) => {
   let i;
   const tabLinks = document.getElementsByClassName('menu-item');
