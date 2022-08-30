@@ -6,6 +6,14 @@ class UI {
     books.forEach((book) => UI.addBookToList(book));
   }
 
+  static validateInput(title, author) {
+    if (!title || !author) {
+      alert('Please fill in the title and author fields')
+      return false;
+    }
+    return true;
+  }
+
   // add the book to the list
   static addBookToList(book) {
     const list = document.querySelector('.books-list');
